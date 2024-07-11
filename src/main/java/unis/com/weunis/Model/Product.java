@@ -12,12 +12,14 @@ public class Product {
     @GeneratedValue long id;
     private String productName;
     private String description;
+    private String url;
 
     private double price;
-    public Product(String productName, String description, double price) {
+    public Product(String productName, String description, double price, String url) {
         this.productName = productName;
         this.description = description;
         this.price = price;
+        this.url = url;
     }
 
     Product(){}
@@ -34,6 +36,10 @@ public class Product {
     public void setPrice(double price) {
         this.price = price;
     }
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
 
 
     public long getId() {
@@ -51,6 +57,10 @@ public class Product {
     public double getPrice() {
         return price;
     }
+    public String getUrl() {
+        return url;
+    }
+
 
 
 }
